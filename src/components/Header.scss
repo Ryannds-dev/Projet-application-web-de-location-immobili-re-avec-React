@@ -1,0 +1,54 @@
+@import "../styles/globals.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px 40px 80px;
+
+  &__logo {
+    height: 68px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__link {
+    text-decoration: none; // enlève le soulignement bleu
+    color: $color-black;
+    font-size: 24px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &.active {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 20px 0 20px; // padding réduit
+
+    &__logo {
+      height: 47px; // taille maquette mobile
+    }
+
+    &__nav {
+      gap: 20px; // espace plus petit
+    }
+
+    &__link {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}

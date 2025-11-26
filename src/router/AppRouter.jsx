@@ -11,8 +11,8 @@ export default function AppRouter() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/housing/:id" element={<Housing />} />
+        <Route path="/a-propos" element={<About />} />
+        <Route path="/logement/:id" element={<Housing />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

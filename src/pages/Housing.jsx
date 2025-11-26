@@ -1,3 +1,3 @@
 export default function Housing() {
-  return <h1>Housing</h1>;
+  return <h1>Logement</h1>;
 }

@@ -1,0 +1,34 @@
+/* ----------------------------------------------------
+   VARIABLES GLOBALES
+---------------------------------------------------- */
+$color-primary: #ff6060; // rouge Kasa
+$color-grey: #c4c4c4; // gris clair
+$color-light: #f6f6f6; // fond gris très clair
+$color-black: #000000; // texte standard
+$color-white: #ffffff; // fond global
+
+/* ----------------------------------------------------
+   POLICES
+---------------------------------------------------- */
+
+/* Import Google Fonts Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+/* ----------------------------------------------------
+   RESET & BASE
+---------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $color-black;
+  background-color: $color-white;
+  max-width: 1440px;
+  margin: 0 auto;
+}
