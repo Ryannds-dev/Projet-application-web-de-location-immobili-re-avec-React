@@ -1,0 +1,35 @@
+@use "../styles/globals" as *;
+
+.card {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  //   overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  cursor: pointer;
+}
+
+// Titre du logement
+.card__title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+  color: $color-white;
+  font-size: 18px;
+  font-weight: 700;
+
+  padding-right: 10px; // pour éviter que le texte touche le bord droit
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 335px;
+    height: 255px;
+  }
+}

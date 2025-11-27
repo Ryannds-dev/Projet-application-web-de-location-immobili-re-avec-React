@@ -1,0 +1,27 @@
+@use "../styles/globals" as *;
+
+.cards-container {
+  margin: 43px 80px 50px; // mêmes marges horizontales que la bannière
+  padding: 56px 50px;
+  background-color: $color-light;
+  border-radius: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 50px 60px; // espace vertical / horizontal entre les cards
+
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    margin: 22px 20px 27px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,4 +1,4 @@
-@import "../styles/globals.scss";
+@use "../styles/globals" as *;
 
 .footer {
   background-color: black;
