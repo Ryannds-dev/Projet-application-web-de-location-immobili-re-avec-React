@@ -1,9 +1,14 @@
 import "./Card.scss";
+import { Link } from "react-router-dom";
 
-export default function Card({ title, image }) {
+export default function Card({ id, title, image }) {
   return (
-    <div className="card" style={{ backgroundImage: `url(${image})` }}>
+    <Link
+      to={`/housing/${id}`}
+      className="card"
+      style={{ backgroundImage: `url(${image})` }}
+    >
       <p className="card__title">{title}</p>
-    </div>
+    </Link>
   );
 }
