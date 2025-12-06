@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiChevronUp } from "react-icons/fi";
+import collapseArrow from "../assets/collapse_arrow.png";
 import "./Collapse.scss";
 
 export default function Collapse({ title, children }) {
@@ -13,7 +13,11 @@ export default function Collapse({ title, children }) {
     <div className={`collapse ${isOpen ? "collapse--open" : ""}`}>
       <button className="collapse__header" onClick={handleToggle}>
         <span className="collapse__title">{title}</span>
-        <FiChevronUp className={`collapse__icon ${isOpen ? "open" : ""}`} />
+        <img
+          src={collapseArrow}
+          alt="flèche de dépliement du contenu du bouton"
+          className={`collapse__icon ${isOpen ? "open" : ""}`}
+        />
       </button>
 
       <div className="collapse__content-wrapper">

@@ -8,64 +8,67 @@
   overflow: hidden;
 
   margin: 15px 20px;
-}
 
-/* image qui remplit le bloc */
-.slideshow__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  /* image qui remplit le bloc */
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-/* flèches gauche/droite */
-.slideshow__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /* bouton contenant flèches gauche/droite */
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    height: 79.2px;
+    transform: translateY(-50%);
 
-  width: 79.2px;
-  height: 79.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: none;
+    border: none;
 
-  background: none;
-  border: none;
+    cursor: pointer;
 
-  color: $color-white;
-  font-size: 200px;
-  font-weight: 700;
+    /* lisibilité */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+  }
 
-  cursor: pointer;
+  /* flèche gauche */
+  &__arrow--prev {
+    left: 20px;
+  }
 
-  /* lisibilité */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-}
+  &__arrow--prev img {
+    transform: scaleX(-1);
+    height: 100%;
+  }
 
-/* flèche gauche */
-.slideshow__arrow--prev {
-  left: 20px;
-}
+  /* flèche droite */
+  &__arrow--next {
+    right: 20px;
+  }
 
-/* flèche droite */
-.slideshow__arrow--next {
-  right: 20px;
-}
+  &__arrow--next img {
+    height: 100%;
+  }
 
-/* 1 / X */
-.slideshow__counter {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  /* 1 / X */
+  &__counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
-  color: $color-white;
-  font-size: 30px;
-  font-weight: 500;
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 500;
 
-  /* lisibilité */
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    /* lisibilité */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
 }
 
 @media (max-width: 768px) {
@@ -73,16 +76,14 @@
     height: 255px;
     border-radius: 10px;
     margin: 15px 20px;
-  }
 
-  .slideshow__arrow {
-    width: 24px;
-    font-size: 40px;
-    margin-top: -12px;
-  }
+    &__arrow {
+      height: 19.8px;
+      margin-top: -12px;
+    }
 
-  .slideshow__counter {
-    font-size: 20px;
-    bottom: 10px;
+    &__counter {
+      display: none;
+    }
   }
 }

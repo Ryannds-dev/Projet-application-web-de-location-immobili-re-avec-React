@@ -1,0 +1,11 @@
+@use "../styles/globals" as *;
+
+.collapses-container {
+  margin: 50px 208px;
+}
+
+@media (max-width: 768px) {
+  .collapses-container {
+    margin: 0 20px;
+  }
+}

@@ -41,8 +41,8 @@ export default function Housing() {
 
         <div className="housing__right">
           {/* rating à gauche, host à droite */}
-          <Rating rating={Number(logement.rating)} />
           <Host name={logement.host.name} picture={logement.host.picture} />
+          <Rating rating={Number(logement.rating)} />
         </div>
       </div>
 

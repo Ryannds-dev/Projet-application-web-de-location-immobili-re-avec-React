@@ -1,4 +1,6 @@
 import "./Rating.scss";
+import ratingStarActive from "../../assets/rating_star_active.png";
+import ratingStarInactive from "../../assets/rating_star_inactive.png";
 
 export default function Rating({ rating }) {
   const totalStars = 5;
@@ -15,7 +17,10 @@ export default function Rating({ rating }) {
             key={index}
             className={`rating__star ${starIsActive ? "active" : ""}`}
           >
-            ★
+            <img
+              src={starIsActive ? ratingStarActive : ratingStarInactive}
+              alt={starIsActive ? "Étoile active" : "Étoile inactive"}
+            />
           </span>
         );
       })}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Slideshow.scss";
+import slideshowArrow from "../assets/slideshow_arrow.png";
 
 export default function Slideshow({ images }) {
   const [index, setIndex] = useState(0);
@@ -25,14 +26,20 @@ export default function Slideshow({ images }) {
             className="slideshow__arrow slideshow__arrow--prev"
             onClick={prevSlide}
           >
-            ‹
+            <img
+              src={slideshowArrow}
+              alt="flèche de défilement des images précédentes de l'appartement"
+            />
           </button>
 
           <button
             className="slideshow__arrow slideshow__arrow--next"
             onClick={nextSlide}
           >
-            ›
+            <img
+              src={slideshowArrow}
+              alt="flèche de défilement des images suivantes de l'appartement"
+            />
           </button>
 
           <div className="slideshow__counter">

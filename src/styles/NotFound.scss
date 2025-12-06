@@ -10,47 +10,43 @@
   text-align: center;
   padding: 40px 20px;
   margin: 80px 50px;
-}
 
-.notfound__code {
-  font-size: 288px;
-  font-weight: 700;
-  color: $color-primary;
-}
+  &__code {
+    font-size: 288px;
+    font-weight: 700;
+    color: $color-primary;
+  }
 
-/* Message sous le 404 */
-.notfound__message {
-  font-size: 36px;
-  font-weight: 500;
-  color: $color-primary; // rose aussi
-}
+  /* Message sous le 404 */
+  &__message {
+    font-size: 36px;
+    font-weight: 500;
+    color: $color-primary; // rose aussi
+  }
 
-/* Lien pour revenir à l’accueil */
-.notfound__link {
-  font-size: 18px;
-  font-weight: 500;
-  color: $color-black;
-  text-decoration: underline;
+  /* Lien pour revenir à l’accueil */
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-black;
+    text-decoration: underline;
+  }
 }
-
-/* ---------------------------------------------
-   MOBILE
---------------------------------------------- */
 
 @media (max-width: 768px) {
   .notfound {
     gap: 20px;
-  }
 
-  .notfound__code {
-    font-size: 96px;
-  }
+    &__code {
+      font-size: 96px;
+    }
 
-  .notfound__message {
-    font-size: 18px;
-  }
+    &__message {
+      font-size: 18px;
+    }
 
-  .notfound__link {
-    font-size: 14px;
+    &__link {
+      font-size: 14px;
+    }
   }
 }

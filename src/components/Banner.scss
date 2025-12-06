@@ -19,32 +19,29 @@
 
   position: relative;
   overflow: hidden;
-}
 
-/* Overlay noir fixe à 60 % */
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
-}
+  /* Overlay noir fixe à 60 % */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
 
-/* Titre dans la bannière (si présent) */
-.banner__title {
-  color: $color-white;
-  font-weight: 700;
-  font-size: 48px;
-  padding: 10px 20px;
+  /* Titre dans la bannière (si présent) */
+  &__title {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 48px;
+    padding: 10px 20px;
 
-  // "Contour" simulé autour des lettres avec plusieurs ombres :
-  // text-shadow: -2px 0 0 #000000, 2px 0 0 #000000, 0 -2px 0 #000000,
-  //   0 2px 0 #000000, 0 0 4px rgba(0, 0, 0, 0.7);
-  text-shadow: 0 0 2px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1);
-  z-index: 1;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1);
+    z-index: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -53,10 +50,10 @@
     height: 111px;
     box-shadow: none;
     border-radius: 10px;
-  }
 
-  .banner__title {
-    font-size: 24px;
-    text-shadow: none;
+    &__title {
+      font-size: 24px;
+      text-shadow: none;
+    }
   }
 }
